@@ -9,9 +9,5 @@ foreach (scandir($currentDirectory . '/classes') as $fileToInclude) {
 $user = new User();
 $cli = new CLI();
 
-$cli->slowEcho("Tron: Phew, you've averted the threat of the MCP. Only one thing remains to be done. If the MCP ever tries to access our server again via HTTP, and we don't want him to. Which HTTP code should we respond with?", 'cyan');
-$cli->slowEcho('Hint! We already know the MCP\'s identity, but we want to refuse him access anyway. Please enter your response (just the number of the code) and then hit the `enter` button', 'white');
-$fin = fopen("php://stdin", "r");
-$line = fgets($fin);
-file_put_contents('assets/response.txt', $line);
-
+$cli->slowEcho("Congratulations, you got rid of the MCP. In order to be done with him forever, we might want to create an instruction manual for future users. create a file named result.txt and fill it with your command history. (The last 50 commands should be enough)", 'cyan');
+$cli->slowEcho("Lever het bestand result.txt in, op basis hiervan wordt je beoordeeld.", 'green');

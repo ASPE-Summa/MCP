@@ -21,6 +21,11 @@ echo $cli->cout_color("     .-\"\"\"\"\"\"-.
 
 $cli->slowEcho(sprintf("MCP: Hello %s, I am the Master Control Program. But you may refer to me as the MCP. And I am going to take over this system. Only an expert Linux user has the power to stop me. MWUHAHAHAHAHA!", $user->getUserName()), "red");
 $cli->slowEcho('Tron: Hey user, we have to work together to stop the MCP. I can tell you what needs to be done, but only you can input the commands to stop the MCT!', 'cyan');
-$cli->slowEcho(sprintf("MCP: I will start by scanning all your files. Oh? What's this? '/wallet/doge.png'. Your crypto wallet is now mine!"), "red");
-$cli->slowEcho('Tron: The MCP can access your files and folders under the username www-data. Make sure he can no longer read/write or execute your doge.png!', 'cyan');
-$cli->slowEcho('Hint, you will need to change the owner and group to root as well as change the access modifiers.', 'white');
+
+for($i = 0; $i < 50; $i++){
+    $fileName = sprintf("spamFile_%d.txt", $i);
+    touch($fileName);
+}
+
+$cli->slowEcho("MCP: I Have created 50 viruses in your current directory. I wonder how you will handle this?", "red");
+$cli->slowEcho("Tron: use wildcards to remove all files starting with the word spam!", 'cyan');
