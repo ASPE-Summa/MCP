@@ -23,7 +23,7 @@ $cli->slowEcho(sprintf("MCP: Hello %s, I am the Master Control Program. But you 
 $cli->slowEcho('Tron: Hey user, we have to work together to stop the MCP. I can tell you what needs to be done, but only you can input the commands to stop the MCT!', 'cyan');
 
 for($i = 0; $i < 50; $i++){
-    $fileName = sprintf("spamFile_%d.txt", $i);
+    $fileName = sprintf("spamFile_%d.txt", $i+1);
     touch($fileName);
 }
 
